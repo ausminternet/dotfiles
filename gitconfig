@@ -5,9 +5,6 @@
 	d = difftool
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	td = ! git log --pretty="%H" --numstat --since="6am" | awk 'NF==3 {plus+=$1; minus+=$2} END {printf("+%d, -%d\n", plus, minus)}'
-[user]
-	name =
-	email =
 [color]
 	diff = auto
 	status = auto
@@ -38,3 +35,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[include]
+  path = .gitconfig-local
