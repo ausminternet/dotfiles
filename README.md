@@ -37,9 +37,14 @@ cd ~/.dotfiles/install/
 
 ## Postinstall
 
-- Default-Shell needs to be set to zsh.
-- user and mail need to be added to the gitconfig.
-- Linux: install https://github.com/so-fancy/diff-so-fancy
+- set default shell to `zsh`
+- create `~/.gitconfig-local`:
+  ```
+  [user]
+    name = John Doe
+    mail = john.doe@example.com
+  ```
+- Linux only: install https://github.com/so-fancy/diff-so-fancy
 
 ## Terminal.app Theme
 Got to `Settings > Profile > Import`, select `Snazzy.terminal` and select as default.
