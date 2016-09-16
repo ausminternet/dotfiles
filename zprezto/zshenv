@@ -10,4 +10,26 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Add .zfunctions to the path
 fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
+
+# Add homebrew to the completion path
+fpath=("/usr/local/bin/" $fpath)
+
+# Configure thefuck
+eval "$(thefuck --alias)"
+
+# Aliases
+alias ll="ls -la"
+
+# FileSearch
+function f() { find . -iname "*$1*" ${@:2} }
+function r() { grep "$1" ${@:2} -R . }
+
+# mkdir and cd
+function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+# check if local config exist and source it
+if [ -f ~/.zshenv-local ]; then
+  source ~/.zshenv-local
+fi
