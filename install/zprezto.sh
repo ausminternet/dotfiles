@@ -14,8 +14,8 @@ fi
 # Backup existing file
 if [ -d $HOME/.zprezto ]; then
   echo "${WARNING} Delete old backup"
-  rm -rf "${HOME}/.zprezto-bkp"
-  
+  rm -rf "$HOME/.zprezto-bkp"
+
   echo "${WARNING} Moving old .zprezto to .zprezto-bkp"
   mv "$HOME/.zprezto" "$HOME/.zprezto-bkp"
 fi
@@ -25,8 +25,24 @@ echo "${STATUS} Installing zprezto"
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 # install pure prompt
+# Backup existing prompt
+if [ -d $HOME/.pure-prompt ]; then
+  echo "${WARNING} Delete old backup"
+  rm -rf "$HOME/.pure-prompt-bkp"
+
+  echo "${WARNING} Moving old .pure-prompt to .pure-prompt-bkp"
+  mv "$HOME/.pure-prompt" "$HOME/.pure-prompt-bkp"
+fi
+
 echo "${STATUS} Installing pure-prompt"
-npm install --global pure-prompt
+git clone https://github.com/sindresorhus/pure.git "$HOME/.pure-prompt"
+
+if [ ! -d $HOME/.zfunctions ]; then
+  mkdir "$HOME/.zfunctions"
+fi
+
+ln -s "$PWD/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
+ln -s "$PWD/async.zsh" "$HOME/.zfunctions/async"
 
 # make symlinks
 echo "${STATUS} Create symlinks"
