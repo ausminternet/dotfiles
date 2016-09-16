@@ -41,8 +41,8 @@ if [ ! -d $HOME/.zfunctions ]; then
   mkdir "$HOME/.zfunctions"
 fi
 
-ln -s ".pure-prompt/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
-ln -s ".pure-prompt/async.zsh" "$HOME/.zfunctions/async"
+ln -s "$HOME/.pure-prompt/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
+ln -s "$HOME/.pure-prompt/async.zsh" "$HOME/.zfunctions/async"
 
 # make symlinks
 echo "${STATUS} Create symlinks"
