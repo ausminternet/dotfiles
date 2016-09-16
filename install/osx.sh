@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-PACKAGES=(tree imagemagick git tmux unrar zsh zsh-completions node wget)
+PACKAGES=(tree imagemagick git tmux unrar zsh zsh-completions node wget diff-so-fancy)
 
 SCRIPT_PATH=$0:A
 SCRIPT_DIR=`dirname $SCRIPT_PATH`
