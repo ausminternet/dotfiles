@@ -42,17 +42,3 @@ cd ~/.dotfiles/install/
 
 ## Terminal.app Theme
 Got to `Settings > Profile > Import`, select `Snazzy.terminal` and select as default.
-
-## Known Problems
- There can be a problem with installing the [pure-prompt](https://github.com/sindresorhus/pure):
- ```
- * Installing pure-prompt
-
-> pure-prompt@1.4.0 postinstall /opt/home/www/.npm-packages/lib/node_modules/pure-prompt
-> dest=/usr/local/share/zsh/site-functions; mkdir -p $dest && ln -sf "$PWD/pure.zsh" $dest/prompt_pure_setup && ln -sf "$PWD/async.zsh" $dest/async || echo 'Could not automagically symlink the prompt. Check out the readme on how to do it manually: https://github.com/sindresorhus/pure#manually'
-
-ln: Symbolische Verknüpfung „/usr/local/share/zsh/site-functions/prompt_pure_setup“ konnte nicht angelegt werden: Keine Berechtigung
-Could not automagically symlink the prompt. Check out the readme on how to do it manually: https://github.com/sindresorhus/pure#manually
- ```
-
- Please check out https://github.com/sindresorhus/pure#manually and add the missing symlinks manually.
