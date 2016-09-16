@@ -1,0 +1,42 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# Add homebrew to the completion path
+fpath=("/usr/local/bin/" $fpath)
+
+# 10 second wait if you do something that will delete everything.  I wish I'd had this before...
+setopt RM_STAR_WAIT
+
+# use magic (this is default, but it can't hurt!)
+setopt ZLE
+
+# only fools wouldn't do this ;-)
+export EDITOR="atom -w -n"
+
+autoload -U promptinit && promptinit
+prompt pure
+
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+
+
+# aliases
+alias ll="ls -la"
+
+# FileSearch
+function f() { find . -iname "*$1*" ${@:2} }
+function r() { grep "$1" ${@:2} -R . }
+
+#mkdir and cd
+function mkcd() { mkdir -p "$@" && cd "$_"; }

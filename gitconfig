@@ -1,0 +1,40 @@
+[alias]
+	co = checkout
+	br = branch
+	s = status
+	d = difftool
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	td = ! git log --pretty="%H" --numstat --since="6am" | awk 'NF==3 {plus+=$1; minus+=$2} END {printf("+%d, -%d\n", plus, minus)}'
+[user]
+	name = Jan Hofmann
+	email = jah@heise.de
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[core]
+	longpaths = true
+	autocrlf = false
+	excludesfile = '~/.gitignore_global'
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	packedGitLimit = 256m
+	packedGitWindowSize = 256m
+[svn]
+	rmdir = true
+[push]
+	default = simple
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[pack]
+	deltaCacheSize = 256m
+	packSizeLimit = 256m
+	windowMemory = 1024m
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
