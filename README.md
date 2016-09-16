@@ -37,7 +37,8 @@ cd ~/.dotfiles/install/
 
 ## Postinstall
 
-Default-Shell needs to be set to zsh.
+- Default-Shell needs to be set to zsh.
+- user and mail need to be added to the gitconfig.
 
 ## Terminal.app Theme
 Got to `Settings > Profile > Import`, select `Snazzy.terminal` and select as default.

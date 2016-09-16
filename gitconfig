@@ -6,8 +6,8 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	td = ! git log --pretty="%H" --numstat --since="6am" | awk 'NF==3 {plus+=$1; minus+=$2} END {printf("+%d, -%d\n", plus, minus)}'
 [user]
-	name = Jan Hofmann
-	email = jah@heise.de
+	name =
+	email =
 [color]
 	diff = auto
 	status = auto
