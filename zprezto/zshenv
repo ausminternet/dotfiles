@@ -16,8 +16,10 @@ fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
 # Add homebrew to the completion path
 fpath=("/usr/local/bin/" $fpath)
 
-# Configure thefuck
-eval "$(thefuck --alias)"
+# Configure thefuck if available
+if hash thefuck 2>/dev/null; then
+  eval "$(thefuck --alias)"
+fi
 
 # Aliases
 alias ll="ls -la"
