@@ -21,3 +21,8 @@ prompt pure
 
 # optionally define some options
 PURE_CMD_MAX_EXEC_TIME=10
+
+# Configure thefuck if available
+if type "thefuck" > /dev/null; then
+  eval "$(thefuck --alias)"
+fi
