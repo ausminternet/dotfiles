@@ -44,6 +44,7 @@ cd ~/.dotfiles/install/
     name = John Doe
     email = john.doe@example.com
   ```
+- Optional: create `~/.zchenv-local` to set machine specific settings.
 - Linux only: install https://github.com/so-fancy/diff-so-fancy
 
 ## Terminal.app Theme
