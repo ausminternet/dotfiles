@@ -16,6 +16,9 @@ fpath=( "${ZDOTDIR:-$HOME}/.zfunctions" $fpath )
 # Add homebrew to the completion path
 fpath=("/usr/local/bin/" $fpath)
 
+# Add zsh-completions to fpath
+fpath=("/usr/local/share/zsh-completions" $fpath)
+
 # Aliases
 alias ll="ls -la"
 
