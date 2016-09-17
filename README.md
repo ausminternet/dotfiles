@@ -38,11 +38,11 @@ cd ~/.dotfiles/install/
 ## Postinstall
 
 - set default shell to `zsh`
-- create `~/.gitconfig-local`:
+- create `~/.gitconfig_local`:
   ```
   [user]
     name = John Doe
-    mail = john.doe@example.com
+    email = john.doe@example.com
   ```
 - Linux only: install https://github.com/so-fancy/diff-so-fancy
 
