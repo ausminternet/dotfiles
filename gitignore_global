@@ -14,3 +14,5 @@ dist
 public
 sass-cache
 *.log
+*.sublime-workspace
+*.sublime-project
