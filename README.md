@@ -30,6 +30,7 @@ cd ~/.dotfiles/install/
 ## Postinstall
 
 - create `~/.gitconfig_local`:
+
   ```
   [user]
     name = John Doe
