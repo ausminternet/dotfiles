@@ -13,12 +13,17 @@ FILES=(
 	bash_aliases
 )
 
-for FILE in ${FILES[@]}; do
-  # Delete existing symlink
-	if [ -h $HOME/.$FILE ]; then
-		rm $HOME/.$FILE
-	fi
+# Find all symlinks in $HOME which point to .dotfiles
+find $HOME -maxdepth 1 -type l | while IFS= read -r lnk
+do
+  if readlink "$lnk" | grep -q '.dotfiles'
+  then
+    echo "remove old symlink for ${lnk}"
+    rm "$lnk"
+  fi
+done
 
+for FILE in ${FILES[@]}; do
   # Backup existing file
 	if [ -f $HOME/.$FILE ]; then
 		echo "Moving old .$FILE to .${FILE}-bkp"
