@@ -7,20 +7,12 @@ My personal dotfiles and themes to get quickly up and running on a new system.
 - gitconfig
 - global gitignore file
 - gemrc
-- [prezto/zsh](https://github.com/sorin-ionescu/prezto) config
+- bash config/exports/aliases
 - Terminal.app Theme/Settings
 - install scripts
 
 ## How does it work?
 All the dotfiles are in your `~/.dotfile` folder and will be symlinked to their appropriate place.
-
-## Preinstall
-
-### Linux
-zsh and zsh-completions need to be installed manually.
-
-### OSX
-Nothing.
 
 ## Usage
 
@@ -37,15 +29,13 @@ cd ~/.dotfiles/install/
 
 ## Postinstall
 
-- set default shell to `zsh`
 - create `~/.gitconfig_local`:
   ```
   [user]
     name = John Doe
     email = john.doe@example.com
   ```
-- Optional: create `~/.zchenv-local` to set machine specific settings.
-- Linux only: install https://github.com/so-fancy/diff-so-fancy
+- Optional: create `~/.bash_local` to set machine specific settings.
 
 ## Terminal.app Theme
-Got to `Settings > Profile > Import`, select `Snazzy.terminal` and select as default.
+Got to `Settings > Profile > Import`, select `One Dark.terminal` and select as default.

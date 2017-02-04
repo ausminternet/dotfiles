@@ -2,7 +2,17 @@
 
 cd $HOME
 
-FILES=(gitconfig gemrc gitignore_global)
+FILES=(
+	gitconfig
+	gemrc
+	gitignore_global
+	bash_profile
+	bash_prompt
+	bashrc
+	bash_export
+	bash_aliases
+)
+
 for FILE in ${FILES[@]}; do
   # Delete existing symlink
 	if [ -h $HOME/.$FILE ]; then
@@ -11,7 +21,7 @@ for FILE in ${FILES[@]}; do
 
   # Backup existing file
 	if [ -f $HOME/.$FILE ]; then
-		echo "${WARNING} Moving old .$FILE to .${FILE}-bkp"
+		echo "Moving old .$FILE to .${FILE}-bkp"
 		mv "$HOME/.$FILE" "$HOME/.${FILE}-bkp"
 	fi
 

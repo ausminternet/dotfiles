@@ -13,8 +13,8 @@
 [core]
 	longpaths = true
 	autocrlf = false
-	excludesfile = ~/.gitignore_global
-	pager = less --tabs=4 -RFX
+	excludesfile = /Users/jah/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 	packedGitLimit = 256m
 	packedGitWindowSize = 256m
 [diff]
@@ -24,12 +24,12 @@
 [svn]
 	rmdir = true
 [push]
-  # Use the Git 1.x.x default to avoid errors on machines with old Git
-  # installations. To use `simple` instead, add this to your `~/.extra` file:
-  # `git config --global push.default simple`. See http://git.io/mMah-w.
-  default = matching
-  # Make `git push` push relevant annotated tags when pushing branches out.
-  followTags = true
+	# Use the Git 1.x.x default to avoid errors on machines with old Git
+	# installations. To use `simple` instead, add this to your `~/.extra` file:
+	# `git config --global push.default simple`. See http://git.io/mMah-w.
+	default = matching
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 [pull]
 	rebase = true
 [rebase]
@@ -40,9 +40,17 @@
 	windowMemory = 1024m
 [include]
   path = ~/.gitconfig_local
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+#[difftool "sourcetree"]
+#	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[user]
+	name = Jan Hofmann
+	email = jah@heise.de
+[commit]
+	template = /Users/jah/.stCommitMsg
