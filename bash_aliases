@@ -153,3 +153,7 @@ alias reload="exec $SHELL -l"
 
 alias d="ssh www@jah01.dave.heise.de"
 alias d2="ssh www@jah02.dave.heise.de"
+
+# render ZSDB content
+alias ruid='sudo -u runwww /opt/www/intern/scripts/zsdb/xml2html.pl -verbose -do-render -preview -target webkiosk -template-base ~/workspace/ -uid'
+alias render='sudo -u runwww /opt/www/intern/scripts/zsdb/xml2html.pl -verbose -do-render -preview -target webkiosk -template-base ~/workspace/'
