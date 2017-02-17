@@ -11,6 +11,7 @@ FILES=(
 	bashrc
 	bash_export
 	bash_aliases
+	bash_functions
 )
 
 # Find all symlinks in $HOME which point to .dotfiles
