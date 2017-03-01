@@ -157,3 +157,8 @@ alias d2="ssh www@jah02.dave.heise.de"
 # render ZSDB content
 alias ruid='sudo -u runwww /opt/www/intern/scripts/zsdb/xml2html.pl -verbose -do-render -preview -target webkiosk -template-base ~/workspace/ -uid'
 alias render='sudo -u runwww /opt/www/intern/scripts/zsdb/xml2html.pl -verbose -do-render -preview -target webkiosk -template-base ~/workspace/'
+
+# go to akwa directories
+alias cdbase="cd ~/workspace/akwa-base"
+alias cdgrid="cd ~/workspace/akwa-grid"
+alias cddocs="cd ~/workspace/akwa-docs"
