@@ -37,3 +37,5 @@ export NODE_ENV=develop
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+export HEISE_REPO_PATH=/Users/jah/workspace/repo/

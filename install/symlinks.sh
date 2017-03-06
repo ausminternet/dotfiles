@@ -9,7 +9,7 @@ FILES=(
 	bash_profile
 	bash_prompt
 	bashrc
-	bash_export
+	bash_exports
 	bash_aliases
 	bash_functions
 )
