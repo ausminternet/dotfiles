@@ -13,7 +13,7 @@
 [core]
 	longpaths = true
 	autocrlf = false
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/jah/.gitignore_global
 	pager = less --tabs=4 -RFX
 	packedGitLimit = 256m
 	packedGitWindowSize = 256m
@@ -36,9 +36,3 @@
 	windowMemory = 1024m
 [include]
   path = ~/.gitconfig_local
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true

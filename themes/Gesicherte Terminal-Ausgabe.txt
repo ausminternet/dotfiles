@@ -1,0 +1,60 @@
+Last login: Mon Mar 20 09:15:09 on ttys001
+
+jah in ~/workspace/akwa-form on develop
+$ atom .
+
+jah in ~/workspace/akwa-form on develop
+$ atom .
+
+jah in ~/workspace/akwa-form on develop [!]
+$ yarn link heise-akwa-button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
