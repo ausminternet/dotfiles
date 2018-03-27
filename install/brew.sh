@@ -4,34 +4,11 @@ BREW_PACKAGES=(
   tree
   git
   git-flow-avh
-  hugo
   youtube-dl
   unrar
-  node@6
+  node@8
   wget
   bash-completion
-)
-
-BREW_CASK_PACKAGES=(
-  1password
-  dropbox
-  spotify
-  whatsapp
-  cyberduck
-  google-chrome
-  mplayerx
-  ynab
-  firefox
-  mamp
-  prepros
-  sourcetree
-  atom
-  trasmission
-  flux
-  qlmarkdown
-  quicklook-json
-  caffeine
-  appcleaner
 )
 
 # Check if Homebrew is installed and install if not
@@ -67,19 +44,5 @@ if [ "$BREW_INSTALLED" = "true" ] ; then
   else
     echo "Installing base packages..."
     /usr/local/bin/brew install ${BREW_PACKAGES[@]}
-  fi
-
-  # Install brew cask packages
-  printf 'Brew cask packages include: %s\n' "${BREW_CASK_PACKAGES[*]}"
-  echo -n "Install cask packages via brew cask [Y/n]? "
-  read INSTALL_CASK
-
-  if [[ "$INSTALL_CASK" = "N" || "$INSTALL_CASK" = "n" ]]; then
-    echo "Skipping brew cask packages..."
-  else
-    echo "activate casks..."
-    brew tap caskroom/cask
-    echo "Installing brew cask packages..."
-    /usr/local/bin/brew cask install ${BREW_CASK_PACKAGES[@]}
   fi
 fi
