@@ -1,14 +1,19 @@
 #!/bin/bash
 
 BREW_PACKAGES=(
-  tree
   git
+  node@8
+  tree
   git-flow-avh
+  ruby
+  yarn
   youtube-dl
   unrar
-  node@8
   wget
   bash-completion
+  lsyncd
+  python
+  perl
 )
 
 # Check if Homebrew is installed and install if not
